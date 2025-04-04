@@ -3,15 +3,36 @@
 /* ESERCIZIO 1
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
-
-let numero1 = prompt("Inserire primo numero da confrontare")
-let numero2 = prompt("Inserire secondo numero da confrontare")
-if (numero1 > numero2) {
-  console.log(`${numero1} è maggiore di  ${numero2}`)
-} else {
-  console.log(`${numero2} è maggiore di  ${numero1}`)
+let esercizio = prompt("Scegliere l'esercizio da eseguire")
+if (esercizio == 1) {
+  eseguiEsercizio1()
+} else if (esercizio == 2) {
+  eseguiEsercizio2()
+} else if (esercizio == 3) {
+  eseguiEsercizio3()
+} else if (esercizio == 4) {
+  eseguiEsercizio4()
+} else if (esercizio == 5) {
+  eseguiEsercizio5()
+} else if (esercizio == 6) {
+  eseguiEsercizio6()
+} else if (esercizio == 7) {
+  eseguiEsercizio7()
+} else if (esercizio == 8) {
+  eseguiEsercizio8()
+} else if (esercizio == 9) {
+  eseguiEsercizio9()
 }
 
+function eseguiEsercizio1() {
+  let numero1 = prompt("Inserire primo numero da confrontare")
+  let numero2 = prompt("Inserire secondo numero da confrontare")
+  if (numero1 > numero2) {
+    console.log(`${numero1} è maggiore di  ${numero2}`)
+  } else {
+    console.log(`${numero2} è maggiore di  ${numero1}`)
+  }
+}
 
 /*
 ESERCIZIO 2
@@ -23,21 +44,20 @@ ESERCIZIO 2
   num < 20 - mostra in console "Large"
   num >= 20 - mostra in console "Huge"
 */
-let num = 0
-if (num < 5) {
-  console.log ("Tiny")
-  num ++
-} else if (num >= 5 && num < 10) {
-  console.log ("Small")
-  num ++
-} else if (num >= 10 && num < 15) {
-  console.log ("Medium")
-  num ++
-} else if (num >= 15 && num < 20) {
-  console.log ("Large")
-  num ++
-} else if (num >= 20) {
-  console.log ("Huge")
+
+function eseguiEsercizio2() {
+  let num = 0
+  if (num < 5) {
+    console.log("Tiny")
+  } else if (num >= 5 && num < 10) {
+    console.log("Small")
+  } else if (num >= 10 && num < 15) {
+    console.log("Medium")
+  } else if (num >= 15 && num < 20) {
+    console.log("Large")
+  } else if (num >= 20) {
+    console.log("Huge")
+  }
 }
 
 //ESERCIZI SUI CICLI:
@@ -46,13 +66,33 @@ if (num < 5) {
   Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8 (suggerimento: ripassa l'uso di "continue").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function eseguiEsercizio3() {
+  let numeriPari = ""
+  let numeriDispari = ""
+  for (let numero = 0; numero <= 10; numero++) {
+    if (numero % 2 == 0) {
+      numeriPari += numero
+    } else {
+      numeriDispari += numero
+    }
+  }
+  console.log("I numeri pari sono : " + numeriPari)
+  console.log("I numeri dispari sono : " + numeriDispari)
+}
 
-/* ESERCIZIO 11
+/* ESERCIZIO 4
   Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare the il valore corrente sia pari o dispari, e mostrare il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function eseguiEsercizio4() {
+for (let i= 0; i<=15; i ++){
+  if (i % 2 == 0) {
+    console.log (`il numero ${i} è  pari`)
+  } else {
+    console.log (`il numero ${i} è dispari`)
+  }
+}
+}
 
 //ESERCIZI EXTRA NON OBBLIGATORI
 
